@@ -20,3 +20,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Catgory star .
+Route::get('catgory/add','CatgoryControllwr@addcatgory')->name('addcatgory');
+Route::post('catgory/post','CatgoryControllwr@postcatgory')->name('postcatgory');
+Route::get('catgory/list','CatgoryControllwr@listcatgory')->name('listcatgory');
+
+
+//Subcatgory start
+Route::get('subcatgory/add','subCatgoryControllwr@addsubcatgory')->name('addsubcatgory');
+Route::post('subcatgory/post','subCatgoryControllwr@postsubcatgory')->name('postsubcatgory');
+Route::get('subcatgory/list','subCatgoryControllwr@listsubcatgory')->name('listsubcatgory');
